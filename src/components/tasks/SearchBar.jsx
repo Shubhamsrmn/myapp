@@ -4,10 +4,12 @@ const SearchBar = ({ tasks, setTasks }) => {
   const [searchIP, setSearchIP] = useState("");
   const searchHandler = (e) => {
     setSearchIP(e.target.value);
+    // if the empty input tasks list will contains all the tasks
     if (e.target.value === "") {
       setTasks(tasks);
       return;
     }
+    // compare search input with title in tasks list if match showing in the contaniner
     const newTasks = tasks.filter((task) =>
       task.title.toLowerCase().startsWith(e.target.value.toLowerCase())
     );
@@ -24,7 +26,6 @@ const SearchBar = ({ tasks, setTasks }) => {
         onChange={searchHandler}
       />
       <button className={styles.search_btn}>Search</button>
-      <div className={styles.search_result_container}></div>
     </div>
   );
 };
