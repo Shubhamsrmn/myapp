@@ -1,8 +1,12 @@
-import { Route, Routes } from "react-router";
+import { Route, Routes, useNavigate } from "react-router";
 import LogIn from "./components/login/LogIn";
 import Tasks from "./components/tasks/Tasks";
-import { useState } from "react";
+import { useEffect, useState } from "react";
 function App() {
+  const navigate = useNavigate();
+  useEffect(() => {
+    navigate("/login");
+  }, []);
   const [isLogin, setLogin] = useState(false);
   return (
     <Routes>
