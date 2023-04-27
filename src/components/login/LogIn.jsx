@@ -6,6 +6,7 @@ import emailImage from "../../utils/images/mail.svg";
 import passwordImage from "../../utils/images/password.svg";
 import styles from "./login.module.css";
 function LogIn({ setLogin }) {
+  // for login use email - shubham@gmail.com password - 123456
   const [email, setEmail] = useState("");
   const [password, setPassword] = useState("");
   const navigate = useNavigate();
