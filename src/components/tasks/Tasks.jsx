@@ -1,10 +1,18 @@
-import React, { useState } from "react";
+import React, { useEffect, useState } from "react";
 import { tasksData } from "../../utils/database/tasks";
 import styles from "./tasks.module.css";
 import SearchBar from "./SearchBar";
+import { useNavigate } from "react-router";
 const Tasks = ({ isLogin }) => {
+  const navigate = useNavigate();
+  // if the is not login send back to login
+  useEffect(() => {
+    if (!isLogin) navigate("/login");
+  }, []);
   const [tasks, setTasks] = useState(tasksData);
+  // setting active drag item
   const [activeDrag, setActiveDrag] = useState(null);
+  //  setting drop where to drop drag item
   const [dropOn, setDropOn] = useState(null);
   const onDragEnd = (e) => {
     let newTasks = [...tasks];
