@@ -43,9 +43,11 @@ const Tasks = ({ isLogin }) => {
               className={styles.task_image}
               draggable="false"
             />
-            <h2 className={styles.task_title}>{task.title}</h2>
-            <p className={styles.task_time}>Start Time: {task.startTime}</p>
-            <p className={styles.task_time}>End Time: {task.endTime}</p>
+            <div className={styles.task_text_container}>
+              <h2 className={styles.task_title}>{task.title}</h2>
+              <p className={styles.task_time}>Start Time: {task.startTime}</p>
+              <p className={styles.task_time}>End Time: {task.endTime}</p>
+            </div>
           </div>
         ))}
       </div>

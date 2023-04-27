@@ -50,16 +50,30 @@
   align-items: center;
   cursor: move;
 }
-.task_title {
-  width: 12rem;
-}
-.task_time {
-  width: 16rem;
-}
 .task_image {
-  width: 10rem;
-  height: 8rem;
+  width: 12rem;
+  height: 10rem;
 }
 .active {
   opacity: 20%;
+}
+
+@media screen and (max-width: 600px) {
+  .tasks_container {
+    width: 90%;
+    padding: 0.4rem;
+  }
+  .single_task_container {
+    width: 90%;
+  }
+  .search_container {
+    width: 90%;
+  }
+  .search_input {
+    padding: 1.2rem 1.6rem;
+  }
+  .task_image {
+    width: 8rem;
+    height: 6rem;
+  }
 }
