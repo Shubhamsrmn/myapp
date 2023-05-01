@@ -37,3 +37,7 @@ export const tasksData = [
       "https://media.istockphoto.com/id/1451456915/photo/female-freelance-developer-coding-and-programming-coding-on-two-with-screens-with-code.jpg?b=1&s=170667a&w=0&k=20&c=7QL_-R6HTGHCYt37C8NyjuW6mIiJeQhDVgW8i_6l4Vk=",
   },
 ];
+
+export const addTask = (task) => {
+  tasksData.push(task);
+};
