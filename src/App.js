@@ -5,9 +5,9 @@ import { useEffect, useState } from "react";
 function App() {
   const navigate = useNavigate();
   useEffect(() => {
-    navigate("/tasks");
+    navigate("/login");
   }, []);
-  const [isLogin, setLogin] = useState(true);
+  const [isLogin, setLogin] = useState(false);
   return (
     <Routes>
       <Route path="/login" element={<LogIn setLogin={setLogin} />} />
